@@ -235,9 +235,12 @@
                 if (fileUrl != nil) {
                     NSString *data = fileUrl.absoluteString;
                     NSString *suggestedName = fileUrl.lastPathComponent;
+                    
+                    NSData *content = [NSData dataWithContentsOfURL:fileUrl];
                     NSDictionary *dict = @{
                         @"text" : self.contentText,
                         @"data" : data,
+                        @"content": [content base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed],
                         @"uti"  : baseUti,
                         @"utis" : itemProvider.registeredTypeIdentifiers,
                         @"name" : suggestedName,
