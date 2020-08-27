@@ -1,3 +1,6 @@
+# cheer modify: 
+  add file content as base64 string
+
 # cordova-plugin-openwith-ios
 
 > This plugin for [Apache Cordova](https://cordova.apache.org/) registers your app to handle certain types of files.
